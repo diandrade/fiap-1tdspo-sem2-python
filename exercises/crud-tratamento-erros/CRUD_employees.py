@@ -1,163 +1,113 @@
+separator = "-" * 50
+display_wrong_option = "Prompt a valid option."
+display_continue= f'''{separator}
+Do you want to continue?
+1 - Yes.
+0 - No.
+{separator}
+'''
+display_key = f'''Inform the key that you want to change: 
+1 - Code
+2 - Name
+3 - Age
+4 - Salary
+'''
 employees = []
 
 def main():
     while True:
-        print('''
-        1 - Add an Employee with their information's.
-        2 - Read the Employee information's.
-        3 - Update the Employee information's.
-        4 - Delete an Employee.
-        5 - Read all the Employees information's
-        6 - Create a report of the Employees with age superior to twenty-five years.
-        7 - Create a report of the Employees with age between twenty-two
-        and thirty-five years with salary above R$3700,00.\n         
-        ''')
-
-        try:
-            user_option = int(input("Select one option between one and seven. Input the number zero to finish the program.\n"))
-        except ValueError:
-            print("Only integer values are accepted.")
-        else:
-            match user_option:
+        display_menu()
+        choice_option = int(input("\nSelect your option: "))
+        while True:
+            match choice_option:
                 case 1:
-                    add_employee()
+                    try:
+                        code = int(input("Code: "))
+                        name = input("Name: ")
+                        age = int(input("Age: "))
+                        salary = int(input("Salary: "))
+                    except ValueError:
+                        print("You need to prompt a number to code, age and salary.")
+                    else:
+                        register_employee(code, name, age, salary)
+                        print("Employee register with succeed")
+                    break
                 case 2:
-                    read_specific_employee_info()
+                    try:
+                        code = int(input("Prompt the code of the employee that you want to read: "))
+                    except ValueError:
+                        print("You need to prompt a number to code.")
+                    else:
+                        read_employee(code)
+                    break
                 case 3:
-                    update_employee_info()
+                    try:
+                        code = int(input("Prompt the code of the employee that you want to update: "))
+                        key = int(input(display_key))
+                    except ValueError:
+                        print("You need to prompt a number to code and key")
+                    else:
+                        update_employee(code, key)
+                    break
                 case 4:
-                    delete_employee()
+                    print(" Something. ")
+                    break
                 case 5:
-                    read_all_employees()
+                    print(" Something. ")
+                    break
                 case 6:
-                    generate_age_based_employee_report()
+                    print(" Something. ")
+                    break
                 case 7:
-                    generate_detailed_employee_report()
-                case 0:
+                    print(" Something. ")
                     break
                 case _:
-                    print("Please, insert a value option.")
+                    print(display_wrong_option)
+        continue_option = int(input(display_continue))
+        while True:
+            if continue_option != 0 and continue_option != 1:
+                print(display_wrong_option)
+                print(display_continue)
+                continue_option = int(input(display_continue))
+            else:
+                break
+        if continue_option == 0:
+            break
 
-def add_employee():
-    try:
-        employee_code = int(input("Write the employee unique code:\n"))
-        employee_name = input("Write the name of the employee:\n")
-        employee_age = int(input("Write the age of the employee:\n"))
-        employee_salary = float(input("Write the salary of the employee:\n"))
+def register_employee(code, name, age, salary):
+    employee = {
+        'Code' : code,
+        'Name' : name,
+        'Age' : age,
+        'Salary' : salary
+    }
+    employees.append(employee)
 
-    except ValueError:
-        print("You might write only numbers to code, age and salary request's.\n")
-    else:
-        employee = {
-            'Code': employee_code,
-            'Name': employee_name,
-            'Age': employee_age,
-            'Salary': employee_salary
-        }
-        employees.append(employee)
-    finally:
-        print("Employee created with success.")
-
-def read_specific_employee_info():
-    if not employees:
-        print("No person was added to the list.")
-    else:
-        index = int(input("Prompt the index of the employee that you want to read: "))
-        try:
-            selected_employee = employees[index]
-        except IndexError:
-            print("You should prompt an existent index.")
-        else:
-            for key, value in selected_employee.items():
-                print(f"{key}: {value}")
-            print("-" * 50)
-
-def update_employee_info():
-    if not employees:
-        print("No person was added to the list.")
-    else:
-        index = int(input("Prompt the index of the employee that you want to update: "))
-        try:
-            selected_employee = employees[index]
-        except IndexError:
-            print("You should prompt an existent index.")
-        else:
-            print('''
-                1 - Code.
-                2 - Name.
-                3 - Age.
-                4 - Salary
-                ''')
-            user_chosen_key = int(input("Select the key that you may want to change: "))
-            try:
-                match user_chosen_key:
-                    case 1:
-                        print(f"The current code stored is: {selected_employee['Code']}")
-                        selected_employee['Code'] = int(input("Prompt the new employee code."))
-                    case 2:
-                        print(f"The current name stored is: {selected_employee['Name']}")
-                        selected_employee['Name'] = int(input("Prompt the new employee name."))
-                    case 3:
-                        print(f"The current age stored is: {selected_employee['Age']}")
-                        selected_employee['Age'] = int(input("Prompt the new employee age."))
-                    case 4:
-                        print(f"The current salary stored is: {selected_employee['Salary']}")
-                        selected_employee['Salary'] = int(input("Prompt the new employee salary."))
-                    case _:
-                        print("Select a valid key.")
-            except ValueError:
-                print("You might write only numbers to code, age and salary request's.\n")
-
-def delete_employee():
-    if not employees:
-        print("No person was added to the list.")
-    else:
-        index = int(input("Prompt the index of the employee that you want to delete: "))
-        try:
-            employees[index]
-        except IndexError:
-            print("You should prompt an existent index.")
-        else:
-            employees.pop(index)
-            print("Employee deleted with success!")
-
-def read_all_employees():
-    if not employees:
-        print("No person was added to the list.")
-    else:
-        for employee in employees:
+def read_employee(code):
+    for employee in employees:
+        if employee['Code'] == code:
             for key, value in employee.items():
-                print(f"{key}: {value}.")
-            print("-" * 50)
+                print(f"{key}: {value}")
+        print(separator)
 
-def generate_age_based_employee_report():
-    check_print = False
-    if not employees:
-        print("No person was added to the list.")
-    else:
-        for employee in employees:
-            if employee['Age'] > 25:
-                check_print = True
-                for key, value in employee.items():
-                    print(f"{key}: {value}")
-                print("-" * 50)
-        if not check_print:
-            print("There are no employees over 25 years old.")
+def display_menu():
+    menu_options = f'''{separator}
+1 - Register a new employee.
+2 - Read employee's info.
+3 - Update employee's info.
+4 - Delete employee's info.
+5 - Read all employee's.
+6 - Read employees with age superior then 25 years.
+7 - Read employees with age between 22 and 35 years with a salary higher then 3700.
+{separator}'''
+    print(menu_options)
 
-def generate_detailed_employee_report():
-    check_print = False
-    if not employees:
-        print("No person was added to the list.")
-    else:
-        for employee in employees:
-            if (22 < employee['Age'] < 35) and employee['Salary'] > 3700:
-                check_print = True
-                for key, value in employee.items():
-                    print(f"{key}: {value}")
-                print("-" * 50)
-        if not check_print:
-            print("There are no employees between 22 and 35 years old with a salary above R$3,700.00.")
-
+'''def update_employee(code, key):
+    for employee in employees:
+        if employee['Code'] == code:
+            print(f"The oldest value of {key} was {employee['Code']}.")
+            new_value = int(input())
+'''
 
 if __name__ == '__main__':
     main()
