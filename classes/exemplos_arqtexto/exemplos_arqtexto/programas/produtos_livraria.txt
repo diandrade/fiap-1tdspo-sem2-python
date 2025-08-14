@@ -1,0 +1,4 @@
+Caneta  200  4.50
+Lápis   150  2.50
+Borracha  260  3.50
+Caderno  50  20.70

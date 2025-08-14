@@ -1,0 +1,77 @@
+EXERCÍCIOS PARA REVISÃO – CRUD e ARQUIVOS TEXTO
+
+
+
+1. Escreva um programa em Python que faça um CRUD em uma lista de dicionários, os quais devem conter os seguintes dados:
+
+a. Código
+
+b. Nome do funcionário
+
+c. Idade do funcionário
+
+d. Salário do funcionário
+
+As operações deverão ser executadas até que o usuário digite uma opção de saída 0 (Deseja continuar (1-SIM / 0-NÃO).
+
+OBS: o programa deverá ter, obrigatoriamente, a função “main” e cada operação do CRUD deverá ser uma função. Além das 4 funções do CRUD, acrescente a função para exibir todos os funcionários, bem como os seguintes relatórios:
+
+- Funcionários com idade superior a 25 anos;
+
+- Funcionários com idade entre 22 e 35 anos, cujo salário seja maior do que R$3700,00.
+
+Acrescente ao menu as opções para exportar os 3 relatórios para arquivos texto.
+
+Incorpore ao CRUD o tratamento de erros (try...except...else...finally) nas operações de inserção e alteração.
+
+
+
+2. Escreva um programa em Python que faça um CRUD em uma lista de dicionários, os quais devem conter os seguintes dados:
+
+a. Código
+
+b. Descrição do produto
+
+c. Quantidade em estoque
+
+d. Valor do produto
+
+As operações deverão ser executadas até que o usuário digite uma opção de saída 0 (Deseja continuar (1-SIM / 0-NÃO).
+
+OBS: o programa deverá ter, obrigatoriamente, a função “main” e cada operação do CRUD deverá ser uma função. Além das 4 funções do CRUD, acrescente a função para exibir todos os funcionários, bem como os seguintes relatórios:
+
+- Produtos cujo valor esteja entre R$150,00 e R$500,00;
+
+- Produtos com quantidade superior a 100 unidades.
+
+Acrescente ao menu as opções para exportar os 3 relatórios para arquivos texto.
+
+Incorpore ao CRUD o tratamento de erros (try...except...else...finally) nas operações de inserção e alteração.
+
+
+
+3. Escreva um programa em Python que faça um CRUD em uma lista de dicionários, os quais devem conter os seguintes dados:
+
+a. Código;
+
+b. Nome;
+
+c. Curso;
+
+d. Disciplina;
+
+e. Faltas;
+
+f. 3 checkpoints (lista de float).
+
+As operações deverão ser executadas até que o usuário digite uma opção de saída 0 (Deseja continuar (1-SIM / 0-NÃO).
+
+OBS: o programa deverá ter, obrigatoriamente, a função “main” e cada operação do CRUD deverá ser uma função. Além das 4 funções do CRUD, acrescente a função para exibir todos os funcionários, bem como os seguintes relatórios:
+
+- Alunos do curso de TDS;
+
+- Alunos da disciplina “Python”, cuja média dos checkpoints seja maior ou igual a 7.0.
+
+Acrescente ao menu as opções para exportar os 3 relatórios para arquivos texto.
+
+Incorpore ao CRUD o tratamento de erros (try...except...else...finally) nas operações de inserção e alteração.

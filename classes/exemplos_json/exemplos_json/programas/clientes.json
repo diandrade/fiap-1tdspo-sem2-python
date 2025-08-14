@@ -1,0 +1,90 @@
+[
+
+{
+
+
+"Codigo": 1,
+
+
+"Nome": "Joao",
+
+
+"CPF": 23233344,
+
+
+"Idade": 20,
+
+
+"Endereco": "Rua X, 20",
+
+
+"Limite_credito": 5000.0
+
+},
+
+{
+
+
+"Codigo": 2,
+
+
+"Nome": "Pedro da Silva",
+
+
+"CPF": 45989094,
+
+
+"Idade": 22,
+
+
+"Endereco": "Rua Z, 40",
+
+
+"Limite_credito": 7000.0
+
+},
+
+{
+
+
+"Codigo": 3,
+
+
+"Nome": "Maria",
+
+
+"CPF": 454988984,
+
+
+"Idade": 25,
+
+
+"Endereco": "Rua Y, 20",
+
+
+"Limite_credito": 8000.0
+
+},
+
+{
+
+
+"Codigo": 4,
+
+
+"Nome": "Antonio",
+
+
+"CPF": 343498984,
+
+
+"Idade": 30,
+
+
+"Endereco": "Rua W, 30",
+
+
+"Limite_credito": 5600.0
+
+}
+]
