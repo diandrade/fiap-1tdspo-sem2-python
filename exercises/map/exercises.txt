@@ -1,0 +1,15 @@
+Para as situações abaixo, crie os programas em Python:
+
+
+
+· Faça uma função comum que calcule 20% de desconto para a próxima black Friday. Utilize-a numa lista que tem os preços dos itens que você planeja comprar. Faça isso primeiro sem MAP e depois com MAP. OBS: o programa deve ter, obrigatoriamente, a função “main”.
+
+· Dada as listas abaixo, faça uma função que calcule o preço final de cada item dado os descontos para cada um deles. OBS: o programa deve ter, obrigatoriamente, a função “main”.
+
+# listaOriginal = [234, 64, 13467, 45.89, 23]
+
+# listaDescontos = [0.3, 0.004, 0.5, 0.03, 0.8]
+
+· Uma função que calcule uma nova lista baseada em uma lista de acordo com a seguinte regra: quando o elemento da lista for par, adicione 5 a este número e, caso contrário, subtraia 2. OBS: estes elementos modificados deverão fazer parte da nova lista.
+
+· Uma função que retorne uma nova lista de palavras convertidas para minúsculo baseada em uma lista de palavras.

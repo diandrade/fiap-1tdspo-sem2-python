@@ -1,0 +1,12 @@
+1)	Utilizando o conceito de argumento (argv) em Python, escreva um programa que receba como argumentos uma opção
+(1 a 3) e mais 2 argumentos (números inteiros). O programa deverá ter uma função para checar e retornar qual é o
+menor número (opção 1), uma função para calcular a multiplicação desses números (opção 2) e outra para exibir
+todos os números dentro do intervalo definido pelos 2 argumentos numéricos (opção 3), desde que o primeiro
+número seja maior do que o segundo. OBS: o programa deve ter, obrigatoriamente, a função “main”.
+
+2)	Utilizando o conceito de argumento (argv) em Python, escreva um programa que receba como argumentos uma opção
+(1 a 3) e mais 1 argumento (tamanho da lista). O programa deverá ter uma função para carregar os elementos da
+lista original de acordo com o tamanho que deve ser passado como argumento (opção 1), uma função para criar e
+exibir outra lista com o triplo dos elementos da lista original (opção 2) e outra para exibir somente os
+elementos pares da lista original (opção 3), desde que o primeiro número seja maior do que o segundo. OBS:
+o programa deve ter, obrigatoriamente, a função “main”.
