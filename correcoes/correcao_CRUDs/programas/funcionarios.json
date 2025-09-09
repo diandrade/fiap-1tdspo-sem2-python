@@ -1,0 +1,50 @@
+[
+
+{
+
+
+"Codigo": 1,
+
+
+"Nome": "Joao Souza",
+
+
+"Idade": 21,
+
+
+"Salario": 10000.0
+
+},
+
+{
+
+
+"Codigo": 2,
+
+
+"Nome": "Pedro",
+
+
+"Idade": 25,
+
+
+"Salario": 12000.0
+
+},
+
+{
+
+
+"Codigo": 3,
+
+
+"Nome": "Antonio",
+
+
+"Idade": 30,
+
+
+"Salario": 17000.0
+
+}
+]

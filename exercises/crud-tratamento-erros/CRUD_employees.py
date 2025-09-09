@@ -11,7 +11,7 @@ display_key = f'''Inform the key that you want to change:
 3 - Age
 4 - Salary
 {separator}'''
-employees = []
+products = []
 
 def main():
     while True:
@@ -90,10 +90,10 @@ def register_employee(code, name, age, salary):
         'Age' : age,
         'Salary' : salary
     }
-    employees.append(employee)
+    products.append(employee)
 
 def read_employee(code):
-    for employee in employees:
+    for employee in products:
         if employee['Code'] == code:
             for key, value in employee.items():
                 print(f"{key}: {value}")
@@ -110,7 +110,7 @@ def update_employee(code, key):
     }
     display_input = f"Prompt the new value of {options[key]}: "
 
-    for employee in employees:
+    for employee in products:
         if employee['Code'] == code:
             print(f"The oldest value of {options[key]} was {employee[options[key]]}.")
             if key == 2:
@@ -123,27 +123,27 @@ def update_employee(code, key):
 
 def delete_employee(code):
     i = 0
-    for employee in employees:
+    for employee in products:
         if employee['Code'] == code:
-            employees.pop(i)
+            products.pop(i)
             break
         i = i + 1
 
 def read_all_employees():
-    for employee in employees:
+    for employee in products:
         for key, value in employee.items():
             print(f"{key}: {value}")
         print(separator)
 
 def age_superior_than_25():
-    for employee in employees:
+    for employee in products:
         if employee['Age'] > 25:
             for key, value in employee.items():
                 print(f"{key}: {value}")
             print(separator)
 
 def age_between_22_25_and_salary_above_3700():
-    for employee in employees:
+    for employee in products:
         if 22 < employee['Age'] < 25 and employee['Salary'] > 3700:
             for key, value in employee.items():
                 print(f"{key}: {value}")
